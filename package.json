@@ -9,7 +9,6 @@
   "author": "Me",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.4.1",
     "react": "^0.13.3"
   },
   "devDependencies": {
