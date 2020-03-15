@@ -13,12 +13,12 @@ gulp.task("babel", function () {
     .pipe(source("bundle.js"))
     //.pipe(buffer())
     //.pipe(uglify())
-    .pipe(gulp.dest("./scripts"));
+    .pipe(gulp.dest("./public/scripts"));
 });
 
 gulp.task("serve", function() {
     connect.server({
-        root: './',
+        root: './public',
         //livereload: true,
         port: 8888        
     });
