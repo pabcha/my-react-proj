@@ -30,3 +30,11 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.parallel('babel', 'serve', 'watch'));
 
+/* 
+    References:
+        https://stackoverflow.com/questions/34114922/babelify-transformation-on-jsx-for-react-element-failing
+        https://github.com/babel/babelify
+        https://github.com/gulpjs/gulp/tree/master/docs/recipes
+        https://gist.github.com/SigurdMW/13847ee74f041279f81dfe2038893675
+        https://github.com/gulpjs/gulp/blob/master/docs/recipes/browserify-transforms.md
+*/
