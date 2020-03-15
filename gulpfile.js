@@ -25,7 +25,7 @@ gulp.task("serve", function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('./src/*.js', gulp.series('babel'));
+    gulp.watch('./src/**/*.js', gulp.series('babel'));
 });
 
 gulp.task('default', gulp.parallel('babel', 'serve', 'watch'));
