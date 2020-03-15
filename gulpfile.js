@@ -6,7 +6,7 @@ var connect = require('gulp-connect');
 
 gulp.task("babel", function () {
     return browserify({
-        entries: ["./src/app.js"]
+        entries: ["./src/main.js"]
     })
     .transform(babelify.configure({}))
     .bundle()
