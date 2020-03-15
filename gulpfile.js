@@ -2,6 +2,7 @@ var gulp = require("gulp");
 var babelify = require('babelify');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var connect = require('gulp-connect');
 
 gulp.task("babel", function () {
     return browserify({
@@ -15,5 +16,13 @@ gulp.task("babel", function () {
     .pipe(gulp.dest("./scripts"));
 });
 
-gulp.task('default', gulp.series('babel'));
+gulp.task("serve", function() {
+    connect.server({
+        root: './',
+        //livereload: true,
+        port: 8888        
+    });
+});
+
+gulp.task('default', gulp.series('babel', 'serve'));
 
